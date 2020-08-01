@@ -14,27 +14,27 @@ function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
 function add() {
   getUserNumberInput();
   const initialValue = currentResult;
-  currentResult = currentResult + parseInt(enteredNumber);
+  currentResult += parseInt(enteredNumber);
   createAndWriteOutput("+", initialValue, enteredNumber);
 }
 
 function subtract() {
   getUserNumberInput();
   const initialValue = currentResult;
-  currentResult = currentResult - parseInt(enteredNumber);
+  currentResult -= parseInt(enteredNumber);
   createAndWriteOutput("-", initialValue, enteredNumber);
 }
 
 function multiply() {
   getUserNumberInput();
   const initialValue = currentResult;
-  currentResult = currentResult * parseInt(enteredNumber);
+  currentResult *= parseInt(enteredNumber);
   createAndWriteOutput("*", initialValue, enteredNumber);
 }
 function divide() {
   getUserNumberInput();
   const initialValue = currentResult;
-  currentResult = currentResult / parseInt(enteredNumber);
+  currentResult /= parseInt(enteredNumber);
   createAndWriteOutput("/", initialValue, enteredNumber);
 }
 
