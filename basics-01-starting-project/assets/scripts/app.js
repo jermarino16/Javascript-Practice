@@ -4,7 +4,7 @@ let logEntries = [];
 
 // Gets input from input field
 function getUserNumberInput() {
-  return parseInt(usrInput.value);
+  return parseInt(userInput.value);
 }
 
 // Generates and writes calculation log
@@ -41,13 +41,6 @@ function calculateResult(calculationType) {
     return;
   }
 
-  // if (
-  //   calculationType === 'ADD' ||
-  //   calculationType === 'SUBTRACT' ||
-  //   calculationType === 'MULTIPLY' ||
-  //   calculationType === 'DIVIDE'
-  // ) {
-
   const initialResult = currentResult;
   let mathOperator;
   if (calculationType === "ADD") {
@@ -66,7 +59,6 @@ function calculateResult(calculationType) {
 
   createAndWriteOutput(mathOperator, initialResult, enteredNumber);
   writeToLog(calculationType, initialResult, enteredNumber, currentResult);
-  // }
 }
 
 function add() {
