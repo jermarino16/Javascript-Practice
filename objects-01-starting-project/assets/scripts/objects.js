@@ -8,6 +8,7 @@ const renderMovies = () => {
 
   if (movies.length === 0) {
     movieList.classList.remove("visible");
+    return;
   } else {
     movieList.classList.add("visible");
   }
@@ -15,7 +16,13 @@ const renderMovies = () => {
 
   movies.forEach((movie) => {
     const movieEl = document.createElement("li");
-    movieEl.textContent = movie.info.title;
+    let text = movie.info.title + " - ";
+    for (const key in movie.info) {
+      if (key !== "title") {
+        text = text + `${key}: ${movie.info[key]}`;
+      }
+    }
+    movieEl.textContent = text;
     movieList.append(movieEl);
   });
 };
@@ -40,6 +47,7 @@ const addMovieHandler = () => {
     },
     id: Math.random(),
   };
+
   movies.push(newMovie);
   renderMovies();
 };
